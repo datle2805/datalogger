@@ -300,9 +300,6 @@ static void Calibre_Task(void)
     RxCnt=0;
     /* Store to buffer */
     StoreRx(&RxCache);
-    
-    /* Send echo */
-    printf(">>%d:%s\r\n",Cnt++,RxCache.Data);
     memset((uint8_t *)&RxCache,0,sizeof(RxCache));
   }
   TO_Task(&Calibre);

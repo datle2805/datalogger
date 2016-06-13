@@ -139,6 +139,8 @@ void LogMode(void)
         {        
           /* Push to LCD display */
           USER_LCD_UsrLog("%s\n",ReceiveNumPtr);
+          /* Push via UART debug */
+          printf("%s\n",ReceiveNumPtr);
           ReceiveNumPtr = strtok (NULL,"\r\n");
         }
         Buzzer_BipTrue();
